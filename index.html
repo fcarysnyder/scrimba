@@ -7,21 +7,22 @@
             <div class="container">
                 <div class="game">
                     <div class="group1">
+                        <!-- addToScore, score, scoreboardElement -->
                         <h3 class="board-title">HOME</h3>
                         <h2 class="score" id="score-home">0</h2>
                         <div class="button-group">
-                            <button onclick="plusOneHome()">+1</button>
-                            <button class="button-middle" onclick="plusTwoHome()">+2</button>
-                            <button onclick="plusThreeHome()">+3</button>
+                            <button onclick="calcScore(x += 1, x, scoreHome)">+1</button>
+                            <button class="button-middle" onclick="calcScore(x += 2, x, scoreHome)">+2</button>
+                            <button onclick="calcScore(x += 3, x, scoreHome)">+3</button>
                         </div>
                     </div>
                     <div class="group1">
                         <h3 class="board-title">GUEST</h3>
                         <h2 class="score" id="score-away">0</h2>
                         <div class="button-group">
-                            <button onclick="plusOneAway()">+1</button>
-                            <button class="button-middle" onclick="plusTwoAway()">+2</button>
-                            <button onclick="plusThreeAway()">+3</button>
+                            <button onclick="calcScore(y += 1, y, scoreAway)">+1</button>
+                            <button class="button-middle" onclick="calcScore(y += 2, y, scoreAway)">+2</button>
+                            <button onclick="calcScore(y += 3, y, scoreAway)">+3</button>
                         </div>
                     </div>
                 </div>
