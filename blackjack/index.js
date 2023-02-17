@@ -32,6 +32,9 @@ function startGame() {
     let secondCard = getRandomCard()
     cards = [firstCard, secondCard]
     sum = firstCard + secondCard
+    if (sum === 22) {
+        startGame()
+    }
     renderGame()
 }
 
