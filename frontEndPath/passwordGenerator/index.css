@@ -1,3 +1,9 @@
+@font-face {
+    font-family: karla;
+    src: url(frontEndPath/passwordGenerator/fonts/Karla/Karla-VariableFont_wght.ttf);
+}
+
 body {
     margin: 0;
+    font-family: karla;
 }
