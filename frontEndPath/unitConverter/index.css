@@ -26,7 +26,7 @@ body {
     background-color: #1F2937;
     position: absolute;
     width: 550px;
-    height: 729px;
+    height: 737px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -54,9 +54,12 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 100%;
+    align-items: flex-start;
+    width: 510px;
     align-items: center;
-    padding-top: 20px;
+    padding: 32px 20px;
+    gap: 20px;
+    
 }
 
 
@@ -66,10 +69,11 @@ body {
     flex-direction: column;
     justify-content: center; /* Horizontal centering */
     align-items: center; /* Vertical centering */
-    width: 478px;
+    width: auto;
+    align-self: stretch;
     background: #273549;
     border-radius: 4px;
-    padding: 16px;
+    padding: 16px 14px;
 }
 
 h1 {
@@ -77,6 +81,7 @@ h1 {
     font-size: 28px;
     line-height: 38px;
     color: white;
+    margin: 0px;
     
 }
 
@@ -152,6 +157,8 @@ button {
     height: 42px;
     
     background: #FFFFFF;
+    padding: 0;
+    border: none;
 
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
     border-radius: 5px;
@@ -164,4 +171,8 @@ button {
     line-height: 24px;
 
     color: #3D3D3D;
+}
+
+button:hover {
+    background: #F1F1F1;
 }
