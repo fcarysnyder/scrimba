@@ -179,13 +179,13 @@ button:hover {
     background: #F1F1F1;
 }
 
-/* .error {
+.error {
     display: flex;
-    padding: 2px 8px;
     justify-content: center;
     align-items: center;
     gap: 8px;
+    margin-top: 4px;
 
     border-radius: 5px;
     background: rgba(210, 28, 28, 0.80);
-} */
+}

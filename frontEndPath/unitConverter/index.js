@@ -13,20 +13,36 @@ document.addEventListener('DOMContentLoaded', function() {
     function handleButtonClick() {
         let inputValue = parseFloat(inputEl.value);
         if (isNaN(inputValue)) {
-            console.log("Invalid input. Please enter a valid number.")
-            // errorMessage.textContent = 'Invalid input. Please enter a valid number.';
+            // console.log("Invalid input. Please enter a valid number.")
+            errorMessage.textContent = 'Invalid input. Please enter a valid number.';
+            lengthEl.textContent = ""
+            volumeEl.textContent = ""
+            massEl.textContent = ""
             return;
         }
         else {
-            const metersToFeet = inputValue * 3.28084;
-            const feetToMeters = inputValue / 3.28084;
-
-            const litersToGallons = inputValue * 0.264172;
-            const gallonsToLiters = inputValue / 0.264172;
-
-            const kgToPounds = inputValue * 2.20462;
-            const poundsToKg = inputValue / 2.20462;
+            // clear error message
+            errorMessage.textContent = '';
             
+            // define conversion factors
+            const distanceCF = 3.28084;
+            const volumeCF = 0.264172;
+            const massCF = 2.20462;
+
+            // meters <-> feet
+            const metersToFeet = inputValue * distanceCF;
+            const feetToMeters = inputValue / distanceCF;
+
+            // gallons <-> liters
+            const litersToGallons = inputValue * volumeCF;
+            const gallonsToLiters = inputValue / volumeCF;
+
+            // kg <-> pounds
+            const kgToPounds = inputValue * massCF;
+            const poundsToKg = inputValue / massCF;
+
+
+            // insert text
             lengthEl.textContent = `${inputValue} meters = ${metersToFeet.toFixed(2)} feet | ${inputValue} feet = ${feetToMeters.toFixed(2)} meters`
             volumeEl.textContent = `${inputValue} liters = ${litersToGallons.toFixed(2)} gallons | ${inputValue} gallons = ${gallonsToLiters.toFixed(2)} liters`
             massEl.textContent = `${inputValue} kliograms = ${kgToPounds.toFixed(2)} pounds | ${inputValue} pounds = ${poundsToKg.toFixed(2)} kilograms`
