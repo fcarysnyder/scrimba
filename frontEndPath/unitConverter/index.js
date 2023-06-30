@@ -1,25 +1,23 @@
 document.addEventListener('DOMContentLoaded', function() {
-
-    // let inputValue = ""
+    // define  html elements
     const inputEl = document.getElementById("numInput-el");
     const buttonClick = document.getElementById("button-click");
     const errorMessage = document.getElementById("error-el")
-
     const massEl = document.getElementById("mass-el")
     const volumeEl = document.getElementById("volume-el")
     const lengthEl = document.getElementById("length-el")
 
-
     function handleButtonClick() {
         let inputValue = parseFloat(inputEl.value);
+        // if error handling is not a number:
         if (isNaN(inputValue)) {
-            // console.log("Invalid input. Please enter a valid number.")
             errorMessage.textContent = 'Invalid input. Please enter a valid number.';
             lengthEl.textContent = ""
             volumeEl.textContent = ""
             massEl.textContent = ""
             return;
         }
+        // if inputValue is a number:
         else {
             // clear error message
             errorMessage.textContent = '';
